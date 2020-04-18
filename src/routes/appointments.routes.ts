@@ -18,11 +18,11 @@ appointmentsRouter.post('/', (request, response) => {
 
         const parsedDate = parseISO(date);
 
-        const creatAppointment = new CreateAppointmentService(
+        const createAppointment = new CreateAppointmentService(
             appointmentsRepository,
         );
 
-        const appointment = creatAppointment.execute({
+        const appointment = createAppointment.execute({
             provider,
             date: parsedDate,
         });
